@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -13,12 +13,16 @@
     >
     
     <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                document.getElementById('body').className += "loaded";
-            }, 0);
-        })
+
+        document.addEventListener("DOMContentLoaded", function(event) {
+
+            console.log("DOM został wczytany");
+            console.log("Tutaj dopiero wyłapujemy elementy");
+
+        });
+        
     </script>
+
 </head>
 
 <body>
@@ -28,7 +32,6 @@
     <button class="smaller">2xMniejszy</button>
     <button class="border">Obramowanie</button>
     <h1>Nazwa</h1>
-
 
 </body>
 

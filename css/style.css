@@ -1,14 +1,40 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
-} */
+}
+
+:root {
+    --textSize: 80px;
+}
+
+body {
+    text-align: center;
+}
 
 button {
     font-size: 40px;
 }
 
 h1 {
+    position: absolute;
     font-family: arial;
-    font-size: 80px;
+    font-size: var(--textSize);
+    left: 50%;
+    top: 50%;
+    padding: 0 10px;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    border: 0px solid black;
 }
 
+button.larger:hover~h1 {
+    font-size: calc(var(--textSize)*2);
+}
+
+button.smaller:hover~h1 {
+    font-size: calc(var(--textSize)/2);
+}
+
+button.border:hover~h1 {
+    border: 20px solid black;
+}
